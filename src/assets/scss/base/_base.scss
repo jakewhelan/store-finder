@@ -1,0 +1,81 @@
+html {
+  box-sizing: border-box; 
+  min-width: 320px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16px;
+  line-height: 20px; 
+  font-family: $brand-font; 
+  color: $brand-black; 
+}
+
+*:focus, *:hover {
+  outline: none; 
+}
+
+h1 {
+  @include hidden-from-humans-but-not-screen-readers;
+}
+
+h2 {
+  @extend .mt0; // margin-top
+  @extend .mb3; // margin-bottom
+  font-weight: $font-regular;
+  font-family: $brand-font;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+h3 { 
+  @extend .mt0; // margin-top
+  @extend .mb3; // margin-bottom
+  font-weight: $font-regular; 
+  font-family: $brand-font; 
+  font-size: 28px;
+  line-height: 32px;
+}
+
+h4 { 
+  @extend .mt0; // margin-top
+  @extend .mb3; // margin-bottom
+  font-weight: $font-regular; 
+  font-family: $brand-font; 
+  font-size: 24px;
+  line-height: 28px;
+}
+
+h5 { 
+  @extend .mt0; // margin-top
+  @extend .mb3; // margin-bottom
+  font-weight: $font-regular; 
+  font-family: $brand-font; 
+  font-size: 20px;
+  line-height: 24px;
+}
+
+h6 { 
+  @extend .mt0; // margin-top
+  @extend .mb3; // margin-bottom
+  font-weight: $font-regular; 
+  font-family: $brand-font; 
+  font-size: 16px;
+  line-height: 20px;
+}
+
+p { 
+  @extend .mt0; // margin-top
+  @extend .mb6; // margin-bottom
+  font-weight: $font-regular; 
+  font-family: $brand-font; 
+  font-size: 16px;
+  line-height: 24px;
+}
+
+p:last-child { 
+  @extend .mb0; // margin-bottom 
+}

@@ -1,0 +1,47 @@
+// breakpoints
+$breakpoint-small: 320px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
+
+// app-width, used for container element
+$app-width: 1250px;
+
+// font
+$brand-font: Arial, Helvetica Neue, Helvetica, sans-serif;
+$font-regular: 400;
+$font-heavy: 700;  
+
+// brand colours
+$brand-black: #000000;
+$brand-white: #FFFFFF;
+$brand-grey: lightgrey;
+$brand-silver: silver;
+$brand-gold: gold;
+$brand-blue: blue;
+$brand-pink: pink;
+$brand-green: green;
+$brand-red: red;
+
+// borders
+$border: 1px solid $brand-black;
+$border--thick: 2px solid $brand-black;
+$border--dot: 2px dotted $brand-black;
+$border-radius: 4px;
+
+// spacing
+$space1: .25rem;     // 4px
+$space2: .5rem;      // 8px
+$space3: 0.75rem;    // 12px
+$space4: 1rem;       // 16px
+$space5: 1.25rem;    // 20px
+$space6: 1.5rem;     // 24px
+$space7: 1.75rem;    // 28px
+$space8: 2rem;       // 32px
+$space9: 2.25rem;    // 36px
+$space10: 2.5rem;    // 40px
+$space11: 2.75rem;   // 44px
+$space12: 3rem;      // 48px
+$space13: 3.25rem;   // 52px
+$space14: 3.5rem;    // 56px
+$space15: 3.75rem;   // 60px
+$space16: 4rem;      // 64px
