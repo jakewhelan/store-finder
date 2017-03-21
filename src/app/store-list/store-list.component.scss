@@ -1,0 +1,128 @@
+@import "../../assets/scss/_common";
+
+:host {
+  flex: 1;
+}
+
+.container {
+  @include grid(row);
+
+  @include breakpoint(large) {
+    width: 950px;
+  }
+}
+
+.message {
+  @include grid(column, 12);
+  text-align: center;
+  h2 {
+    font-size: 44px;
+    line-height: 48px;
+    font-weight: 700;
+  }
+  p {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.store {
+  @include grid(column, 12);
+  @include grid(row, null, align-left);
+  border: $border;
+  background: $brand-grey;
+}
+
+.store__details {
+  @include grid(column, 12);
+  @include grid(row);
+  text-align: center;
+  order: 2;
+
+  @include breakpoint(large) {
+    @include grid(column, 4);
+    order: 1;
+  }
+}
+
+.store__details__group {
+  @include grid(column, 12);
+
+  @include breakpoint(medium) {
+    @include grid(column, 6, align-middle);
+  }
+
+  @include breakpoint(large) {
+    @include grid(column, 12);
+  }
+}
+
+.store__details__title {
+  @include grid(column, 12);
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.store__details__distance {
+  @include grid(column, 12, align-left);
+  font-weight: 700;
+}
+
+.store__details__address {
+  @include grid(column, 12);
+}
+
+.store__details__phone-number {
+  @include grid(column, 12);
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.store__details__opening-hours {
+  @include grid(column, 12);
+  @include grid(row);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.store__details__opening-hours__heading {
+  @include grid(column, 12);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.store__details__opening-hours__container {
+  @include grid(column, 12);
+  @include grid(row, null, align-center);
+}
+
+.store__details__opening-hours__day {
+  @include grid(column, auto, align-center);
+  width: 50px;
+  margin-right: 0;
+}
+
+.store__details__opening-hours__time {
+  @include grid(column, auto, align-center);
+  width: 100px;
+  text-align: center;
+}
+
+.store__map {
+  @include grid(column, 12);
+  background-position: center !important;
+  height: 200px;
+  order: 1;
+
+  @include breakpoint(medium) {
+    background-size: cover !important;
+  }
+
+  @include breakpoint(large) {
+    @include grid(column, 8);
+    height: 100%;
+    order: 2;
+  }
+}

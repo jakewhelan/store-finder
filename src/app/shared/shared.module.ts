@@ -6,8 +6,9 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 // components
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { KeysPipe } from './pipes/keys/keys.pipe';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { FooterComponent } from './footer/footer.component';
   ],
   declarations: [
     HeaderComponent, 
-    FooterComponent
+    FooterComponent, 
+    KeysPipe
   ],
   exports: [
     // @angular modules
@@ -26,7 +28,10 @@ import { FooterComponent } from './footer/footer.component';
 
     // components
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+
+    // pipes
+    KeysPipe
   ]
 })
 export class SharedModule { }

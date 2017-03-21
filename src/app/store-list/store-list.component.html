@@ -1,3 +1,28 @@
-<p>
-  store-list works!
-</p>
+<div class="container px5">
+  <div class="message mb4">
+    <h2 class="mt8 mb4">Welcome to storeFinder</h2>
+    <p *ngIf="geolocationPermissionGranted == 1">To continue, please enable location services in your browser.</p>
+    <p *ngIf="geolocationPermissionGranted == 2">Here are our closest stores</p>
+  </div>
+  <div class="store mb4" *ngFor="let store of stores">
+    <div class="store__details py4 px6">
+      <div class="store__details__group">
+        <div class="store__details__title mb1">{{store.name}}</div>
+        <div class="store__details__distance">{{store.distanceFromCurrentLocation.toFixed(1)}}km from your location</div>
+        <div class="store__details__address mt8 mb2">{{store.address}}</div>
+        <div class="store__details__phone-number mb2">{{store.phone}}</div>
+      </div>
+      <div class="store__details__group">
+        <div class="store__details__opening-hours">
+          <h3 class="store__details__opening-hours__heading mb1">Opening hours:</h3>
+          <div class="store__details__opening-hours__container" *ngFor="let key of store.openinghours | keys">
+            <div class="store__details__opening-hours__day">{{key}}</div>
+            <div class="store__details__opening-hours__time">{{store.openinghours[key]}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="store__map" [style.background]="'url(https://maps.googleapis.com/maps/api/staticmap?center=' + store.location[0] + ',' + store.location[1] + '&zoom=13&size=1000x1000&sensor=false&markers=color:red|' + store.location[0] + ',' + store.location[1] +')'">
+    </div>
+  </div>
+</div>
