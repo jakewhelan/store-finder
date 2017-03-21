@@ -1,4 +1,4 @@
-# PhoneApp
+# storeFinder
 
 ## Production preview server
 Run `ng serve --prod --aot` for a production build deployed in a local dev server. Navigate to `http://localhost:4200/`.
